@@ -5,20 +5,20 @@ import { button as buttonStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { YoutubeIcon } from "@/components/icons";
+import { InstagramIcon, YoutubeIcon } from "@/components/icons";
 
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-lg text-center justify-center">
-        <h1 className={title()}>Make&nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
+      <div className="inline-block max-w-2xl text-center justify-center">
+        <h1 className={title()}>Türkiye&nbsp;</h1>
+        <h1 className={title({ color: "violet" })}>Bilim Olimpiyatları&nbsp;</h1>
         <br />
         <h1 className={title()}>
-          websites regardless of your design experience.
+          Mezunları Topluluğu
         </h1>
         <h2 className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
+          Biz bilime gönül vermiş; kimimiz okul sırasında, kimimiz atıldığı hayatta öğrenmeyi bırakmayan bir topluluğuz.
         </h2>
       </div>
 
@@ -32,6 +32,7 @@ export default function Home() {
           })}
           href={siteConfig.links.instagram}
         >
+          <InstagramIcon size={20} />
           Instagram
         </Link>
         <Link
@@ -42,14 +43,6 @@ export default function Home() {
           <YoutubeIcon size={20} />
           Youtube
         </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="flat">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
       </div>
     </section>
   );
