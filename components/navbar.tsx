@@ -24,6 +24,7 @@ import {
   FacebookIcon,
   LinkedinIcon,
   YoutubeIcon,
+  ChevronDownIcon,
 } from "@/components/icons";
 import {
   Dropdown,
@@ -32,7 +33,7 @@ import {
   DropdownSection,
   DropdownItem
 } from "@nextui-org/dropdown";
-import { Button } from "@nextui-org/button";
+import { Button, ButtonGroup } from "@nextui-org/button";
 
 export const Navbar = () => {
   const searchInput = (
@@ -76,10 +77,23 @@ export const Navbar = () => {
                 </NextLink>
               </NavbarItem>
             ) : (
-              <Dropdown key={item.label}>
-                <DropdownTrigger>
-                  <Button color="primary" className="text-base font-medium" variant="light">
+              <ButtonGroup variant="flat" key={item.label}>
+                <Button>
+                  <NextLink
+                    className={clsx(
+                      linkStyles({ color: "foreground" }),
+                      "data-[active=true]:text-primary data-[active=true]:font-medium",
+                    )}
+                    color="foreground"
+                    href={item.href}
+                  >
                     {item.label}
+                  </NextLink>
+                </Button>
+                <Dropdown placement="bottom-end">
+                <DropdownTrigger>
+                  <Button isIconOnly>
+                    <ChevronDownIcon />
                   </Button>
                 </DropdownTrigger>
                 <DropdownMenu aria-label="Link Actions">
@@ -90,6 +104,7 @@ export const Navbar = () => {
                   ))}
                 </DropdownMenu>
               </Dropdown>
+              </ButtonGroup>
             ))
           ))}
         </ul>
