@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -9,7 +11,7 @@ import {
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
-import { link as linkStyles } from "@nextui-org/theme";
+import { dropdown, link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { siteConfig } from "@/config/site";
@@ -23,6 +25,14 @@ import {
   LinkedinIcon,
   YoutubeIcon,
 } from "@/components/icons";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownSection,
+  DropdownItem
+} from "@nextui-org/dropdown";
+import { Button } from "@nextui-org/button";
 
 export const Navbar = () => {
   const searchInput = (
@@ -50,20 +60,37 @@ export const Navbar = () => {
             <p className="font-bold text-inherit">TÜBİOME</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden lg:flex gap-4 justify-start ml-2 place-items-center">
           {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
+            (typeof item.dropdownItems == "undefined" ? (
+              <NavbarItem key={item.href}>
+                <NextLink
+                  className={clsx(
+                    linkStyles({ color: "foreground" }),
+                    "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  )}
+                  color="foreground"
+                  href={item.href}
+                >
+                  {item.label}
+                </NextLink>
+              </NavbarItem>
+            ) : (
+              <Dropdown key={item.label}>
+                <DropdownTrigger>
+                  <Button color="primary" className="text-base font-medium" variant="light">
+                    {item.label}
+                  </Button>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Link Actions">
+                  {item.dropdownItems.map((dropdownItem) => (
+                    <DropdownItem key={dropdownItem.label} href={dropdownItem.href}>
+                      {dropdownItem.label}
+                    </DropdownItem>
+                  ))}
+                </DropdownMenu>
+              </Dropdown>
+            ))
           ))}
         </ul>
       </NavbarContent>
@@ -111,7 +138,7 @@ export const Navbar = () => {
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
                 color="foreground"
-                href="#"
+                href={item.href}
                 size="lg"
               >
                 {item.label}

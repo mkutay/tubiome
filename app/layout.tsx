@@ -7,15 +7,41 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { HeartFilledIcon } from "@/components/icons";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://nextjs-site-mu-brown.vercel.app/`),
   title: {
     default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    template: `%s - TÜBİOME`,
   },
   description: siteConfig.description,
   icons: {
     icon: "/favicon.ico",
+  },
+  generator: 'Next.js',
+  applicationName: 'TÜBİOME',
+  referrer: 'origin-when-cross-origin',
+  authors: [{ name: 'Mehmet Kutay Bozkurt', url: 'https://www.mkutay.dev' }],
+  creator: 'Mehmet Kutay Bozkurt',
+  publisher: 'Mehmet Kutay Bozkurt',
+  keywords: ['tübitak', 'bilim olimpiyatları'],
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: 'https://nextjs-site-mu-brown.vercel.app/',
+    siteName: siteConfig.name,
+    locale: 'tr_TR',
+    type: 'website',
+  },
+  alternates: {
+    canonical: './',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
   },
 };
 
@@ -59,6 +85,8 @@ export default function RootLayout({
             </footer>
           </div>
         </Providers>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

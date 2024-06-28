@@ -7,6 +7,48 @@ export const siteConfig = {
     {
       label: "Branşlar",
       href: "/branslar",
+      dropdownItems: [
+        {
+          label: "Fizik",
+          href: "/branslar/fizik",
+        },
+        {
+          label: "Kimya",
+          href: "/branslar/kimya",
+        },
+        {
+          label: "Biyoloji",
+          href: "/branslar/biyoloji",
+        },
+        {
+          label: "Matematik",
+          href: "/branslar/matematik",
+        },
+        {
+          label: "Bilgisayar",
+          href: "/branslar/bilgisayar",
+        },
+        {
+          label: "Astrofizik",
+          href: "/branslar/astrofizik",
+        },
+        {
+          label: "Coğrafya",
+          href: "/branslar/cografya",
+        },
+        {
+          label: "Felsefe",
+          href: "/branslar/felsefe",
+        },
+        {
+          label: "Ekonomi",
+          href: "/branslar/ekonomi",
+        },
+        {
+          label: "Linguistik",
+          href: "/branslar/linguistik",
+        },
+      ],
     },
     {
       label: "Yurtdışı Eğitim",
@@ -21,8 +63,8 @@ export const siteConfig = {
       href: "/etkinlikler",
     },
     {
-      label: "Biz",
-      href: "/biz",
+      label: "Hakkımızda",
+      href: "/hakkimizda",
     },
   ],
   navMenuItems: [
@@ -47,8 +89,8 @@ export const siteConfig = {
       href: "/etkinlikler",
     },
     {
-      label: "Biz",
-      href: "/biz",
+      label: "Hakkımızda",
+      href: "/hakkimizda",
     },
   ],
   links: {
