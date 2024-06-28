@@ -8,10 +8,10 @@ import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function AboutPage() {
+export default function Page() {
   return (
     <div className="text-center">
-      <h1 className={`${title()}`}>Branslar</h1>
+      <h1 className={`${title()}`}>Branşlar</h1>
       <div className="gap-2 grid grid-cols-2 md:grid-cols-5 mt-8 md:mt-10 max-w-screen">
         {siteConfig.navItems[0].dropdownItems?.map((item, index) => (
           <Link href={item.href} key={index}>
