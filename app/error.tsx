@@ -16,15 +16,16 @@ export default function Error({
   }, [error]);
 
   return (
-    <div>
-      <h2>Something went wrong!</h2>
+    <div className="prose">
+      <h1>Hata</h1>
+      <p>Olamaz! Bir şey yanlış gitti.</p>
       <button
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()
         }
       >
-        Try again
+        Tekrar Deneyin
       </button>
     </div>
   );

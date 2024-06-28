@@ -8,7 +8,7 @@ export default function NotFound() {
       </h1>
       <hr/>
       <p className="text-xl">
-        Oh no! This page does not exist.
+        Olamaz! Bu sayfayı bulamadık.
       </p>
     </section>
   );
