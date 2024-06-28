@@ -9,6 +9,7 @@ import rehypeKatex from 'rehype-katex';
 import { notFound } from 'next/navigation';
 import { siteConfig } from '@/config/site';
 import { title } from '@/components/primitives';
+import { Suspense } from 'react';
 
 const options = {
   mdxOptions: {
@@ -41,7 +42,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     <div className="prose">
       <h1 className={title()}>{props.meta.title}</h1>
       <main>
-        <MDXRemote source={props.content} options={options}/>
+        <MDXRemote source={props.content} options={options} />
       </main>
     </div>
   );
