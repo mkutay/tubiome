@@ -1,8 +1,8 @@
 export default function Home() {
   return (
-    <main className="prose max-w-prose mx-auto my-8">
-      <h1>
-        This site is currently being worked on.
+    <main className="prose mx-auto">
+      <h1 className="tracking-tighter">
+        This site is currently being worked on. çöğüış 1234567890
       </h1>
     </main>
   );

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "@/app/globals.css";
+import NavBar from "@/app/ui/navBar";
+import Footer from "@/app/ui/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "TÜBİOME | Türkiye Bilim Olimpiyatları Mezunları Topluluğu",
@@ -16,8 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${raleway.className} flex flex-col min-h-screen`}>
+        <NavBar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
