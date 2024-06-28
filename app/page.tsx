@@ -5,7 +5,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { YoutubeIcon } from "@/components/icons";
 
 export default function Home() {
   return (
@@ -30,17 +30,17 @@ export default function Home() {
             radius: "full",
             variant: "shadow",
           })}
-          href={siteConfig.links.docs}
+          href={siteConfig.links.instagram}
         >
-          Documentation
+          Instagram
         </Link>
         <Link
           isExternal
           className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
+          href={siteConfig.links.youtube}
         >
-          <GithubIcon size={20} />
-          GitHub
+          <YoutubeIcon size={20} />
+          Youtube
         </Link>
       </div>
 
