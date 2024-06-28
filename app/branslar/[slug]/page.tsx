@@ -3,18 +3,13 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import fs from 'fs';
 import matter from 'gray-matter';
 import remarkGfm from 'remark-gfm';
-import remarkLint from 'remark-lint';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
 import { notFound } from 'next/navigation';
 import { siteConfig } from '@/config/site';
 import { title } from '@/components/primitives';
-import { Suspense } from 'react';
 
 const options = {
   mdxOptions: {
-    remarkPlugins: [remarkGfm, remarkLint, remarkMath],
-    rehypePlugins: [rehypeKatex],
+    remarkPlugins: [remarkGfm],
   }
 };
 
@@ -42,6 +37,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     <div className="prose">
       <h1 className={title()}>{props.meta.title}</h1>
       <main>
+        {/* @ts-expect-error Async Server Component */}
         <MDXRemote source={props.content} options={options} />
       </main>
     </div>
