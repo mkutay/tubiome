@@ -10,9 +10,9 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="text-center">
+    <div>
       <h1 className={`${title()}`}>Branşlar</h1>
-      <div className="gap-2 grid grid-cols-2 md:grid-cols-5 mt-8 md:mt-10 max-w-screen">
+      <div className="gap-2 grid grid-cols-2 md:grid-cols-5 mt-8 md:mt-10">
         {siteConfig.navItems[0].dropdownItems?.map((item, index) => (
           <Link href={item.href} key={index}>
             <Card shadow="sm" isPressable isFooterBlurred radius="md" className="lg:size-[200px] sm:[140px]">

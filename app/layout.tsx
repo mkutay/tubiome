@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(`https://nextjs-site-mu-brown.vercel.app/`),
   title: {
     default: siteConfig.name,
-    template: `%s - TÜBİOME`,
+    template: `%s | TÜBİOME`,
   },
   description: siteConfig.description,
   icons: {
@@ -28,9 +28,12 @@ export const metadata: Metadata = {
   publisher: 'Mehmet Kutay Bozkurt',
   keywords: ['tübitak', 'bilim olimpiyatları'],
   openGraph: {
-    title: siteConfig.name,
+    title: {
+      default: siteConfig.name,
+      template: `%s | TÜBİOME`,
+    },
     description: siteConfig.description,
-    url: 'https://nextjs-site-mu-brown.vercel.app/',
+    url: siteConfig.url,
     siteName: siteConfig.name,
     locale: 'tr_TR',
     type: 'website',

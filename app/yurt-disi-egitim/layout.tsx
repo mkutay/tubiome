@@ -2,14 +2,14 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: 'Hakkımızda',
-  description: 'Türkiye Bilim Olimpiyatları Mezunları Topluluğu olarak bizim kim olduğumuz.',
+  title: 'Yurt Dışı Eğitim',
+  description: 'Bu sayfada yurt dışında eğitim alma konusunda birçok içerik bulunmaktadır.',
   keywords: ['yurt dışı', 'eğitim', 'sat', 'act', 'ielts', 'ingilizce testi'],
   openGraph: {
-    title: 'Hakkımızda',
-    description: 'Türkiye Bilim Olimpiyatları Mezunları Topluluğu olarak bizim kim olduğumuz.',
-    url: siteConfig.url,
-    siteName: siteConfig.name + '/hakkimizda',
+    title: 'Yurt Dışı Eğitim',
+    description: 'Bu sayfada yurt dışında eğitim alma konusunda birçok içerik bulunmaktadır.',
+    url: siteConfig.url + '/yurt-disi-egitim',
+    siteName: siteConfig.name,
     locale: 'tr_TR',
     type: 'article',
   },

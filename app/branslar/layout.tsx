@@ -1,3 +1,20 @@
+import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: 'Branşlar',
+  description: 'Türkiye Bilim Olimpiyatları Mezunları Topluluğu olarak üzerinde çalıştığımız bilim olimpiyatları branşları.',
+  keywords: ['yurt dışı', 'eğitim', 'sat', 'act', 'ielts', 'ingilizce testi'],
+  openGraph: {
+    title: 'Branşlar',
+    description: 'Türkiye Bilim Olimpiyatları Mezunları Topluluğu olarak üzerinde çalıştığımız bilim olimpiyatları branşları.',
+    url: siteConfig.url,
+    siteName: siteConfig.name + '/branslar',
+    locale: 'tr_TR',
+    type: 'article',
+  },
+};
+
 export default function Layout({
   children,
 }: {
