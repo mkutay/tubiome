@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  url: 'https://nextjs-site-mu-brown.vercel.app/',
+  url: 'https://tubiome.vercel.app/',
   name: "TÜBİOME | Türkiye Bilim Olimpiyatları Mezunları Topluluğu",
   description: "Biz bilime gönül vermiş; kimimiz okul sırasında, kimimiz atıldığı hayatta öğrenmeyi bırakmayan bir topluluğuz.",
   navItems: [
