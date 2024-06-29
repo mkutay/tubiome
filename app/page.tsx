@@ -98,9 +98,9 @@ export default function Home() {
                   />
                 </CardBody>
                 <CardFooter
-                  className="before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10"
+                  className="before:bg-white/10 border-white/20 border-1 overflow-hidden sm:py-1 py-0 sm:px-3 px-2 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10"
                 >
-                  <p className="text-white/75 sm:text-xl text-lg font-bold">{item.label}</p>
+                  <p className="text-white/75 sm:text-xl text-lg sm:font-bold font-semibold">{item.label}</p>
                 </CardFooter>
               </Card>
             </Link>
