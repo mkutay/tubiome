@@ -1,12 +1,10 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { Providers } from "@/app/providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import { HeartFilledIcon } from "@/components/icons";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/footer";
