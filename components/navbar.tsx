@@ -68,7 +68,7 @@ export const Navbar = () => {
     />
   );
 
-  return ( // bg-[#A6A8A7] dark:bg-[#494B4A] bg-[#DC8616] dark:bg-[#4D1803] bg-[#CAB59D] dark:bg-[#5B4539] bg-[#D1976E] dark:bg-[#785A3F] bg-[#BDA1A7] dark:bg-[#84636B] bg-[#727B59] dark:bg-[#0A3C11] bg-[#7A7D58] dark:bg-[#464B34] bg-[#89877A] dark:bg-[#494A43] bg-[#737557] dark:bg-[#353C26] bg-[#987257] dark:bg-[#3D2F27] bg-[#5E8275] dark:bg-[#072C2A]
+  return (
     <NextUINavbar maxWidth="xl" position="sticky" className={itemProps.color}>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
