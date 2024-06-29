@@ -34,10 +34,11 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 export default function Page({ params }: { params: { slug: string } }) {
   const props = getSubject(params);
 
-  let itemProps: { label: string, href: string, biome: string } = {
+  let itemProps: { label: string, href: string, biome: string, color: string } = {
     label: 'Fizik',
     href: '/branslar/fizik',
     biome: 'grove',
+    color: 'bg-[#93AECA] dark:bg-[#628AB2]',
   };
 
   siteConfig.navItems[0].dropdownItems?.forEach((item) => {
@@ -47,7 +48,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   });
 
   return (
-    <div className="prose">
+    <div className="prose dark:prose-invert">
       <Image
         alt={`${props.slug} ${itemProps.biome} fotografi`}
         src={`/fotograflar/branslar/${itemProps.biome}.jpg`}

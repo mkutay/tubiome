@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="prose">
+    <div className="prose dark:prose-invert">
       <h1 className={title()}>Topluluk</h1>
       <p>Birçok bilim olimpiyatı dalları kendi aralarında gruplaşmışlardır. Bunlar arasında herkese açık olan topluluk yerleri aşağıda belirtilmiştir.</p>
       <ul>

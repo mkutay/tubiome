@@ -2,7 +2,7 @@ import { title } from "@/components/primitives";
 
 export default function Page() {
   return (
-    <div className="prose">
+    <div className="prose dark:prose-invert">
       <h1 className={title()}>Yurt Dışı Eğitim</h1>
       <p>
         Bu sayfada yurt dışında eğitim alma konusunda birçok içerik bulunmaktadır. Aramızdan birçoğumuz

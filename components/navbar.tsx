@@ -34,8 +34,24 @@ import {
   DropdownItem
 } from "@nextui-org/dropdown";
 import { Button, ButtonGroup } from "@nextui-org/button";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
+  const pathname = usePathname();
+
+  let itemProps: { label: string, href: string, biome: string, color: string } = {
+    label: 'Fizik',
+    href: '/branslar/fizik',
+    biome: 'grove',
+    color: '',
+  };
+
+  siteConfig.navItems[0].dropdownItems?.forEach((item) => {
+    if (item.href == pathname) {
+      itemProps = item;
+    }
+  });
+
   const searchInput = (
     <Input
       aria-label="Search"
@@ -53,7 +69,7 @@ export const Navbar = () => {
   );
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="xl" position="sticky" className={itemProps.color}>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -77,12 +93,11 @@ export const Navbar = () => {
                 </NextLink>
               </NavbarItem>
             ) : (
-              <ButtonGroup variant="flat" key={item.label}>
+              <ButtonGroup variant="bordered" key={item.label}>
                 <Button>
                   <NextLink
                     className={clsx(
                       linkStyles({ color: "foreground" }),
-                      "data-[active=true]:text-primary data-[active=true]:font-medium",
                     )}
                     color="foreground"
                     href={item.href}

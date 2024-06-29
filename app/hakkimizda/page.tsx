@@ -2,7 +2,7 @@ import { title } from "@/components/primitives";
 
 export default function Page() {
   return (
-    <div className="prose">
+    <div className="prose dark:prose-invert">
       <h1 className={title()}>Hakkımızda</h1>
       <p>
         Biz bilime gönül vermiş; kimimiz okul sırasında, kimimiz atıldığı hayatta öğrenmeyi bırakmayan bir topluluğuz. TÜBiome olarak ulusal ve uluslararası olimpiyatlara katılan öğrencilerin kariyerlerinin ilerleyen dönemlerinde yaşıtlarıyla ve olimpiyata hazırlanan alt dönemleriyle iletişim halinde kalmasını amaçlıyoruz.
