@@ -25,7 +25,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
       title: props.meta.title,
       description: props.meta.description,
       url: siteConfig.url + '/branslar/' + props.slug,
-      locale: props.meta.locale,
+      locale: 'tr_TR',
       type: 'article',
     },
   };

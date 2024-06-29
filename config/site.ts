@@ -87,6 +87,10 @@ export const siteConfig = {
       label: "Hakkımızda",
       href: "/hakkimizda",
     },
+    {
+      label: "Blog",
+      href: "/blog/sayfa/1",
+    },
   ],
   navMenuItems: [
     {
@@ -112,6 +116,10 @@ export const siteConfig = {
     {
       label: "Hakkımızda",
       href: "/hakkimizda",
+    },
+    {
+      label: "Blog",
+      href: "/blog/sayfa/1",
     },
   ],
   links: {
