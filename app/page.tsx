@@ -44,9 +44,9 @@ export default function Home() {
         </Link>
       </div>
 
-      <Divider className="my-16"/>
+      <Divider className="sm:my-16 my-10"/>
 
-      <div className="max-w-6xl mb-16">
+      <div className="max-w-6xl sm:mb-16 mb-10">
         <h1 className={title()}>Son&nbsp;</h1>
         <Link href="/blog/sayfa/1" className={title({ color: "blue" })}>
           <h1 className={title({ color: "blue" })}>
