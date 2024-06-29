@@ -56,6 +56,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         height={0}
         sizes="100vw"
         style={{ width: '100%', height: 'auto' }}
+        className="rounded-xl"
       />
       <h1 className={title()}>{props.meta.title}</h1>
       <main>
