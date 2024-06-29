@@ -46,8 +46,18 @@ export const Navbar = () => {
     color: '',
   };
 
+  let tags:string[] = [];
+
+  if (pathname.includes('blog')) {
+    siteConfig.postTags.forEach((post) => {
+      if (pathname == '/blog/' + post.post) {
+        tags = post.tags;
+      }
+    });
+  }
+
   siteConfig.navItems[0].dropdownItems?.forEach((item) => {
-    if (item.href == pathname) {
+    if (item.href == pathname || tags.includes(item.slug)) {
       itemProps = item;
     }
   });
