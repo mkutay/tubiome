@@ -8,8 +8,8 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Pagination, PaginationItem, PaginationCursor } from "@nextui-org/pagination";
 import { redirect } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import BlogPagination from "@/app/ui/blog/blogPagination";
-import ReadMoreButton from "@/app/ui/blog/readMoreButton";
+import BlogPagination from "@/components/blogPagination";
+import ReadMoreButton from "@/components/readMoreButton";
 
 export function generateMetadata({ params }: { params: { id: string } }) {
   const id = Number(params.id);
