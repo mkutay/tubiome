@@ -9,3 +9,133 @@ excerpt: "[Codeforces](https://codeforces.com), bilgisayar olimpiyatı platforml
 
 [Codeforces](https://codeforces.com), bilgisayar olimpiyatı platformlarının kullanıcı sayısı olarak en büyüğüdür. Sık sık yarışmalar düzenlemekte ve problem
 kütüphanesinde neredeyse 15000 problem bulunmaktadır.
+
+Bu yazıda CodeForces'ın basit özelliklerini göstereceğiz, [detaylı İngilizce makale](https://codeforces.com/blog/entry/99660)ye de bakmak isteyebilirsiniz.
+
+Eğer yazı okumak yerine video izlemek istiyorsanız [Kayacan abinin videosu](https://youtu.be/wSgub-CKzuc?si=a0hCBySh2gz8isvl)nu izleyebilirsiniz.
+
+# Hesap Açma
+
+CodeForces hesap açmak için iki yol sunar: e-posta ile hesap açmak ve Gmail ile giriş yapmak.
+Gmail ile nasıl hesap açılacağını göstermeyeceğiz fakat [bu](https://codeforces.com/enter/Gmail) linkine tıklayarak yapabilirsiniz.
+
+E-posta ile hesap açmak için öncelikle [bu](https://codeforces.com/register) adrese gidin.
+
+![register page](/fotograflar/blog/codeforces-kullanimi/register-page.png)
+
+E-postanızı girdikten sonra kendinize bir "handle" yani kullanıcı adı seçmeniz gerekiyor.
+Kullanıcı adınızı seçerken özen göstermek isteyebilirsiniz çünkü yılda sadece bir kez değiştirebileceksiniz.
+Kendinize bir şifre seçin ve girin.
+
+Register yani kayıt ol tuşuna tıkladığınızda verdiğiniz e-postaya bir doğrulama linki gelecek. Hesabınızı doğruladıktan sonra hesabınızı kullanmaya başlayabilirsiniz.
+
+Dikkat: Eğer kullanıcı adınızı yanlış seçtiyseniz 7 gün boyunca değiştirmek için süreniz olacak, eğer 7 günü doldurduysanız bir sonraki yılbaşını beklemeniz gerekecek.
+
+# Problem Kütüphanesi
+
+[Problemset](https://codeforces.com/problemset) yani problem kütüphanesi CodeForces'da daha önce düzenlenen yarışmalarda çıkmış problemlerı içerir.
+Problem kütüphanesini etkin kullanabilmek için problemlere filtre uygulayarak zorluğunu çözebileceğiniz bir seviyeye getirmek gerekir.
+Sağda bulunan "Filter Problems" panelinden problemler zorluk ve içerdiği konuya göre filtrelenebilir.
+
+![filter problems](/fotograflar/blog/codeforces-kullanimi/filter-problems.png)
+
+Eğer bilgisayar olimpiyatına yeni başlıyorsanız paneldeki "Difficulty"nin karşısındaki 2 kutuya da $800$ yazın ve "Apply" düğmesine tıklayın.
+
+Artık problemlerden rastgele bir tane seçip çözmeyi deneyebilirsiniz.
+
+# Problem Metni
+
+Problem metninin ne anlattığını anlamak için örnek bir problem seçelim, mesela [Watermelon](https://codeforces.com/problemset/problem/4/A).
+
+![watermelon problemi](/fotograflar/blog/codeforces-kullanimi/watermelon.png)
+
+Problemin adının altına yazan "time limit per test" ve "memory limit per test" probleme yazdığınız kodun kullanabileceği maksimum zaman ve hafızayı gösteriyor.
+Örneğin bu problem için yazılan bir kod 1 saniyeden fazla zaman harcamamalı ve 64 MB'dan fazla hafıza tüketmemelidir, aksi taktirde çözüm doğru sayılmaz.
+
+Soru metni sorunun ne istediğini anlatır.
+Örneğin bu problemde istenen şey bir $w$ sayısının iki $a$ ve $b$ pozitif çift sayısının toplamı olarak gösterilip gösterilemediğini söyleyen bir kod.
+
+Soru metninin altındaki "Input" (girdi) ve "Output" (çıktı) bölümleri programın $w$ sayısını ne şekilde girdi olarak alması gerektiğini ve cevabı ne şekilde çıktı olarak vermesi gerektiğini söylüyor. Aynı zamanda girdi bölümünde verilen $w$ sayısının 100'den küçük olacağını söylüyor.
+
+"Examples" (örnekler) kodunuzu yüklemeden denemek için küçük testlerdir.
+
+"Note" kısmı eğer örneklerin doğruluğunu anlamadıysanız bakabileceğiniz açıklama kısmıdır.
+
+# Problemin Kodunu Yüklemek
+
+Bir problemi çözdükten sonra çözümün doğru olup olmadığını test etmek için kodunuzu CodeForces'a yüklemeniz gerekiyor.
+Örnek olarak [Again Twenty Five!](https://codeforces.com/contest/630/problem/A) probleminin kodunu yükleyelim.
+
+Problemin kodu oldukça basit. C dilinde yazılmış şu kodu yüklemeyi deneyebilirsiniz:
+
+```cpp
+#include <stdio.h>
+
+int main()
+{
+	puts("25");
+}
+```
+
+NOT: Merak etmeyin problem kütüphanesindeki bir soru için çözümü kendiniz yapmamak CodeForces kurallarına aykırı değildir.
+Sadece yarışma anında hile yapmak kurallara aykırıdır.
+İsterseniz yine de kendi kodunuzu yazmayı deneyebilirsiniz.
+
+![twenty five problemi](/fotograflar/blog/codeforces-kullanimi/twenty-five.png)
+
+Önce **SUBMIT CODE** yazan düğmeye tıklayın.
+
+![submit butonu](/fotograflar/blog/codeforces-kullanimi/submit.png)
+
+Kodu hangi problem göndereceğinizi seçmeniz gerekiyor. "Problem" yazısının karşısındaki "Choose Problem"a tıklayın ve problemi seçin (örneğimiz için "A - Twenty Five Again!").
+
+Daha sonra kodun hangi programlama dilinde yazıldığını seçmeniz gerekiyor. "Language" yazısının karşısındaki kutucuğa tıklayın. Başında "GNU GCC" veya "GNU G++" yazan dillerden herhangi birini seçebilirsiniz. Derleyici sürümleri değişken olduğundan hangisinin en iyisi olduğunu bu belgeye koyamıyoruz.
+
+![source code](/fotograflar/blog/codeforces-kullanimi/source-code.png)
+
+"Source Code" yazısının karşısındaki kutucuğa kodunuzu kopyalayıp yapıştırabilirsiniz. Veya "Choose file" kısmından dosya olarak da seçebilirsiniz.
+
+Artık deneme vakti, aşağıdaki "Submit" düğmesine bastığınızda kodunuz değerlendirilmeye alınır.
+
+Her şey yolunda gittiyse ve çözümünüz doğruysa yeşil bir <span className="text-green-500">Accepted</span> yazısı görürsünüz.
+Eğer bunun yerine <span className="text-gray-500">Running on test 23</span> veya <span className="text-gray-500">In Queue</span> yazısını görürseniz kodunuz hala çalışmaktadır, bekleyin ve sayfayı yenileyin.
+
+Ancak, eğer <span className="text-red-500">Wrong answer on test 37</span>, <span className="text-red-500">Time limit exceeded on test 37</span> gibi bir şey görürseniz kodunuzda veya çözümünüzde bir hata vardır.
+
+![accepted](/fotograflar/blog/codeforces-kullanimi/ac.png)
+
+# Soruyu Çözemedim
+
+Eğer soruyu çözemediyseniz ve yardım almak ya da çözüme bakmak istiyorsanız bunun için iki yer vereceğim.
+
+## Editorial
+
+"Editorial" bir sorunun çözümünü ve çözmek için ipuçlarını içeren bir çözümler sayfasıdır, coğu soruda bulunur. Editoriala ulaşmak için sorunun sayfasının sağ altındaki "Contest Materials" paneline inin.
+
+![editorial image](/fotograflar/blog/codeforces-kullanimi/editorial.png)
+
+Burada editorial veya tutorial linki görürseniz tıklayın, bu sizi bir blog sayfasına götürecektir. [Örnek bir editorial](https://codeforces.com/blog/entry/130252).
+
+## Birine sormak (ft. bilgoli)
+
+Türkiye'deki bilgisayar olimpiyatçılarının bulunduğu [Bilgisayar Olimpiyatı](https://discord.gg/EedMW25Rmg) Discord sunucusuna girerseniz cp-tartisma kanalında size yardımcı olacak insanları bulabilirsiniz.
+
+NOT: Sunucuya kayıt olmak için CodeForces hesabınızı vermeniz gerekmektedir.
+
+# Contestler
+
+"Contest" yani yarışmalar CodeForces'da kendinizi denemek veya motivasyonunuzu artırmak için iyi bir fırsattır. Bir yarışmanın tarihi yaklaştığında CodeForces bunu sayfanın sağ üstüne koyar.
+
+![contest yarismalar](/fotograflar/blog/codeforces-kullanimi/contest.png)
+
+Yarışmaya kaydolmak için "Register Now" düğmesine tıklayın.
+
+![contest yarismaa termleri](/fotograflar/blog/codeforces-kullanimi/contest-terms.png)
+
+Sözleşmeyi okuduktan sonra "Register" düğmesine bastığınızda kayıt olmuş olursunuz. Yarışmanın saati geldiğinde Register yerine "Enter" yazacaktır, buna tıklayarak contestin sorularını çözmeye başlayabilirsiniz.
+
+NOT: Contestteki performansınıza göre "CodeForces Rating"iniz belirlenir. Ratinginiz düştü veya yükseldi diye fazla sevinip üzülmeyin gelişmeye odaklanın O7
+
+# Kapanış
+
+Son bir not olarak... CodeForces çok eğlenceli olabilir fakat en azından son ay birinci aşamaya çalışın ki kampta buluşalım <span className="text-red-400">\<3</span>.
