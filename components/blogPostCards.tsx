@@ -13,18 +13,18 @@ export default function BlogPostCards({ startInd, endInd }: { startInd: number, 
   return (
     <>
       {posts.map((post, index) => (
-        <Card className="max-w-2xl" key={`${post}-${index}`} shadow="md">
-          <CardHeader className="flex flex-col prose dark:prose-invert">
-            <p className="text-xl font-semibold my-0">{post.meta.title}</p>
-            <p className="text-sm my-0 italic text-center">{post.meta.description}</p>
+        <Card className="max-w-2xl prose-p:my-1 prose-hr:my-0 prose dark:prose-invert" key={`${post}-${index}`} shadow="md">
+          <CardHeader className="flex flex-col">
+            <p className="text-xl font-semibold">{post.meta.title}</p>
+            <p className="text-sm italic text-center">{post.meta.description}</p>
           </CardHeader>
-          <Divider className="my-0"/>
-          <CardBody className="prose dark:prose-invert">
+          <Divider/>
+          <CardBody>
             {/* @ts-expect-error Async Server Component */}
             <MDXRemote source={post.meta.excerpt}/>
           </CardBody>
-          <Divider className="my-0"/>
-          <CardFooter className="prose dark:prose-invert items-center justify-center">
+          <Divider/>
+          <CardFooter className="items-center justify-center">
             <Link
               href={`/blog/${post.slug}`}
             >
