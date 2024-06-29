@@ -54,6 +54,7 @@ export default function Page({ params }: { params: { id: string } }) {
             </CardHeader>
             <Divider className="my-0"/>
             <CardBody className="prose dark:prose-invert">
+              {/* @ts-expect-error Async Server Component */}
               <MDXRemote source={post.meta.excerpt}/>
             </CardBody>
             <Divider className="my-0"/>

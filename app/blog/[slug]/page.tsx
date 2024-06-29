@@ -78,6 +78,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       </p>
       <hr className="my-4" />
       <main>
+        {/* @ts-expect-error Async Server Component */}
         <MDXRemote source={props.content} options={options}/>
       </main>
     </div>
