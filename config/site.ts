@@ -43,7 +43,7 @@ export const siteConfig = {
           label: "Astrofizik",
           href: "/branslar/astrofizik",
           biome: "jungle",
-          color: "bg-[#727B59] dark:bg-[#0A3C11]",
+          color: "bg-[#5E8275] dark:bg-[#072C2A]",
         },
         {
           label: "Coğrafya",
