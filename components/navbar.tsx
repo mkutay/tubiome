@@ -130,33 +130,12 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden lg:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-700" />
-          </Link>
-          <Link isExternal aria-label="Instagram" href={siteConfig.links.instagram}>
-            <InstagramIcon className="text-default-700" />
-          </Link>
-          <Link isExternal aria-label="Facebook" href={siteConfig.links.facebook}>
-            <FacebookIcon className="text-default-700" />
-          </Link>
-          <Link isExternal aria-label="Linkedin" href={siteConfig.links.linkedin}>
-            <LinkedinIcon className="text-default-700" />
-          </Link>
-          <Link isExternal aria-label="Youtube" href={siteConfig.links.youtube}>
-            <YoutubeIcon className="text-default-700" width={32} height={24}/>
-          </Link>
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Instagram" href={siteConfig.links.instagram}>
-          <InstagramIcon className="text-default-700" />
-        </Link>
-        <Link isExternal aria-label="Youtube" href={siteConfig.links.youtube}>
-          <YoutubeIcon className="text-default-700" width={32} height={24}/>
-        </Link>
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>

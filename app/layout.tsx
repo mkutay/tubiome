@@ -9,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import { HeartFilledIcon } from "@/components/icons";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -75,17 +76,7 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://www.mkutay.dev/"
-                title="mkutay.dev ana sayfa"
-              >
-                <HeartFilledIcon className="text-primary"/>
-                <p className="text-primary font-semibold">Kutay</p>
-              </Link>
-            </footer>
+            <Footer/>
           </div>
         </Providers>
         <Analytics />
