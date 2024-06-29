@@ -4,9 +4,6 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { format } from 'date-fns';
 import remarkGfm from 'remark-gfm';
-import remarkLint from 'remark-lint';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
 import { notFound } from 'next/navigation';
 import { siteConfig } from '@/config/site';
 import { title } from '@/components/primitives';
@@ -14,8 +11,8 @@ import Link from 'next/link';
 
 const options = {
   mdxOptions: {
-    remarkPlugins: [remarkGfm, remarkLint, remarkMath],
-    rehypePlugins: [rehypeKatex],
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [],
   }
 };
 
