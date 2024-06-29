@@ -1,15 +1,9 @@
-import getPosts, { getPostsLength } from "@/app/lib/blog/getPosts";
-import { Divider } from "@nextui-org/divider";
+import { getPostsLength } from "@/app/lib/blog/getPosts";
 import { title } from "@/components/primitives";
-import Link from 'next/link';
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/config/site";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
-import { Pagination, PaginationItem, PaginationCursor } from "@nextui-org/pagination";
-import { redirect } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import BlogPagination from "@/components/blogPagination";
-import ReadMoreButton from "@/components/readMoreButton";
+import BlogPostCards from "@/components/blogPostCards";
 
 export function generateMetadata({ params }: { params: { id: string } }) {
   const id = Number(params.id);
@@ -35,49 +29,24 @@ export default function Page({ params }: { params: { id: string } }) {
     notFound();
   }
 
-  const posts: {
-    slug: string,
-    meta: { [key: string]: any }
-  }[] = getPosts(4 * (id - 1), 4 * id);
-
   return (
-    <div className="prose dark:prose-invert">
+    <div className="prose dark:prose-invert mb-8">
       <h1 className={title()}>
         Blog Postlarımız
       </h1>
-      <div className="mt-8">
-        {posts.map((post, index) => (
-          <Card className="max-w-2xl mt-4" key={`${post}-${index}`}>
-            <CardHeader className="flex flex-col prose dark:prose-invert">
-              <p className="text-xl font-semibold my-0">{post.meta.title}</p>
-              <p className="text-sm my-0 italic text-center">{post.meta.description}</p>
-            </CardHeader>
-            <Divider className="my-0"/>
-            <CardBody className="prose dark:prose-invert">
-              {/* @ts-expect-error Async Server Component */}
-              <MDXRemote source={post.meta.excerpt}/>
-            </CardBody>
-            <Divider className="my-0"/>
-            <CardFooter className="prose dark:prose-invert items-center justify-center">
-              <Link
-                href={`/blog/${post.slug}`}
-              >
-                <ReadMoreButton text="Devamını Oku"/>
-              </Link>
-            </CardFooter>
-          </Card>
-        ))}
+      <div className="mt-8 flex flex-col gap-3">
+        <BlogPostCards startInd={4 * (id - 1)} endInd={4 * id}/>
       </div>
-      <BlogPagination params={params} posts={posts}/>
+      <BlogPagination params={params} postsLength={postsLength}/>
     </div>
   );
 }
 
 export async function generateStaticParams() {
-  const posts = getPosts(0, 100000);
+  const postsLength = getPostsLength();
 
   let ret: {id: string}[] = [];
-  for (let i = 1; i <= Math.ceil(posts.length / 4); i++) {
+  for (let i = 1; i <= Math.ceil(postsLength / 4); i++) {
     ret.push({ id: i.toString() });
   }
 

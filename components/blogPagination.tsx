@@ -4,16 +4,11 @@ import { redirect } from "next/navigation";
 import { Pagination, PaginationItem, PaginationCursor } from "@nextui-org/pagination";
 
 export default function BlogPagination(
-  { params, posts }: { 
+  { params, postsLength }: { 
     params: { id: string },
-    posts: {
-      slug: string,
-      meta: { [key: string]: any },
-    }[],
+    postsLength: number,
   },
 ) {
-  const postsLength = posts.length;
-
   return (
     <Pagination
       total={Math.ceil(postsLength / 4)}
