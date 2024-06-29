@@ -79,7 +79,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         {props.meta.description}
       </p>
       <hr className="my-4" />
-      <main>
+      <main className="prose-img:mx-auto">
         {/* @ts-expect-error Async Server Component */}
         <MDXRemote source={props.content} options={options}/>
       </main>
