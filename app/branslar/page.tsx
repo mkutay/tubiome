@@ -22,13 +22,13 @@ export default function Page() {
                   height={220}
                   alt={item.label}
                   className="w-full object-cover h-[200px]"
-                  src={`/fotograflar${item.href}.jpg`}
+                  src={`/fotograflar/branslar/${item.biome}-square.jpg`}
                 />
               </CardBody>
               <CardFooter
                 className="before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10"
               >
-                <b>{item.label}</b>
+                <b className="text-white/75">{item.label}</b>
               </CardFooter>
             </Card>
           </Link>

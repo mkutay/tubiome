@@ -12,42 +12,52 @@ export const siteConfig = {
         {
           label: "Fizik",
           href: "/branslar/fizik",
+          biome: "grove",
         },
         {
           label: "Kimya",
           href: "/branslar/kimya",
+          biome: "dripstone",
         },
         {
           label: "Biyoloji",
           href: "/branslar/biyoloji",
+          biome: "birch",
         },
         {
           label: "Matematik",
           href: "/branslar/matematik",
+          biome: "badlands",
         },
         {
           label: "Bilgisayar",
           href: "/branslar/bilgisayar",
+          biome: "cherry",
         },
         {
           label: "Astrofizik",
           href: "/branslar/astrofizik",
+          biome: "jungle",
         },
         {
           label: "Coğrafya",
           href: "/branslar/cografya",
+          biome: "taiga",
         },
         {
           label: "Felsefe",
           href: "/branslar/felsefe",
+          biome: "basalt"
         },
         {
           label: "Ekonomi",
           href: "/branslar/ekonomi",
+          biome: "savannah",
         },
         {
           label: "Linguistik",
           href: "/branslar/linguistik",
+          biome: "desert",
         },
       ],
     },

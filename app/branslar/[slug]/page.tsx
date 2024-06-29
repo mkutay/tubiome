@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import { notFound } from 'next/navigation';
 import { siteConfig } from '@/config/site';
 import { title } from '@/components/primitives';
+import Image from 'next/image';
 
 const options = {
   mdxOptions: {
@@ -33,8 +34,28 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 export default function Page({ params }: { params: { slug: string } }) {
   const props = getSubject(params);
 
+  let itemProps: { label: string, href: string, biome: string } = {
+    label: 'Fizik',
+    href: '/branslar/fizik',
+    biome: 'grove',
+  };
+
+  siteConfig.navItems[0].dropdownItems?.forEach((item) => {
+    if (item.href == `/branslar/${props.slug}`) {
+      itemProps = item;
+    }
+  });
+
   return (
     <div className="prose">
+      <Image
+        alt={`${props.slug} ${itemProps.biome} fotografi`}
+        src={`/fotograflar/branslar/${itemProps.biome}.jpg`}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: '100%', height: 'auto' }}
+      />
       <h1 className={title()}>{props.meta.title}</h1>
       <main>
         {/* @ts-expect-error Async Server Component */}
