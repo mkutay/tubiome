@@ -8,3 +8,156 @@ excerpt: "[AtCoder](https://atcoder.jp), Japonlarn bilgisayar olimpiyatı platfo
 ---
 
 [AtCoder](https://atcoder.jp), Japonlarn bilgisayar olimpiyatı platformu. Matematik ağırlıklı sorularıyla da bilinir. Neredeyse her hafta yarışma düzenlenir.
+
+> Atcoder çözün. (Cengiz Eray Aslan)
+
+# Hesap Açmak
+
+[Sağ üstteki "Sign Up" butonu](https://atcoder.jp/register)na tıklayın ve kendinize bir kullanıcı adı belirleyin.
+Kullanıcı adı en az 3 en fazla 16 adet harf, sayı veya alt çizgiden oluşmalı.
+Kullanıcı adınızı belirledikten sonra e-posta, şifre gibi gerekli kısımları doldurun ve mavi "sign up" butonuna tıklayın.
+
+# Geçmiş Problemler
+
+AtCoder'daki yarışmalarda daha önce çıkan soruları AtCoder'ın sitesinde liste halinde görmek için malesef bir yol yok, fakat [Kenkoooo'nun AtCoder Problem Listesi](https://kenkoooo.com/atcoder/#/table/)nde geçmiş problemleri görebiliyorsunuz.
+
+Siteye girdiğinizde soruları görebilmek için AtCoder'ın hangi yarışmasının problemlerini görmek istediğinizi seçmeniz gerek.
+
+![Kenkoooo Contests](/fotograflar/blog/atcoder-kullanimi/kenkoooo-contests.png)
+
+En önemli 3 yarışma *ABC*, *ARC* ve *AGC*. ABC en kolayı, ARC zor ve AGC
+çok zor. Yeni başlayan birinin ABC problemlerinden seçmesi iyi olur
+zaten açılımı "AtCoder Beginner Contest".
+
+Problemlerin yanındaki topun rengi onların zorluğunu gösterir. [Renklerin
+sayı karşılığına buradan bakabilirsiniz](https://atcoder.jp/posts/16).
+
+# Problem Metni
+
+Örnek olarak [CTZ](https://atcoder.jp/contests/abc336/tasks/abc336_b)
+problemini inceleyelim.
+
+İsminin hemen altında "Time Limit" (zaman limiti) ve "Memory Limit"
+(hafıza limiti) vermiş. Zaman limiti 2 saniye ve Hafıza limiti 1024 MB
+yani 1 GB. Yani eğer probleme yazdığınız kodun çalışması 2 saniyeden
+fazla sürerse veya 1 GB'dan fazla hafıza harcarsa yanlış sayılır.
+
+Zaman limitinin altında "Score" var, bu problemi yarışma anında
+çözseydiniz size kaç puan getireceğini gösteriyor.
+
+Problemin puanının altında problemin kendisi verilmiş.
+
+"Constraints" bölümü programa verilecek girdi için kısıtlar verir, eğer
+bu olmasaydı $N = 10^{100}$ vermesinde bir sorun olmazdı. Burada $N$'in
+en fazla $10^9$ olacağını söylemiş.
+
+"Input" ve "Output" bölümleri programa verilecek girdinin formatını ve
+vermesi gereken çıktının formatını gösteriyor.
+
+"Sample Input" yani örnek girdi kodunuzu göndermeden önce çözümünüzü
+kontrol etmek için kullanabilirsiniz. Bazı örnek girdilerin altında
+açıklama yazısı verilmiş, eğer örnek girdinin neden böyle olduğunu
+anlayamazsanız açıklama size yardımcı olur.
+
+NOT: Kodunuzun örnek girdilerden geçmiş olması tamamen doğru olduğu
+anlamına gelmez.
+
+# Kodu Göndermek
+
+Soruyu çözdüğünüzde doğruluğunu kontrol etmek için kodunuzu AtCoder'a
+göndermeniz gerekiyor. Kodu kısa olduğundan örnek problem olarak yine
+[CTZ](https://atcoder.jp/contests/abc336/tasks/abc336_b) kullanalım.
+
+Şu kodu kullanacağız:
+
+```cpp
+#include <stdio.h>
+int main()
+{
+  int n;
+  scanf("%d", &n);
+  printf("%d\n", __builtin_ctz(n));
+}
+```
+
+NOT: *Yarışma bitmişken* problemin kodunu başkasından almak AtCoder
+kurallarına aykırı değil merak etmeyin.
+
+Problem sayfasının en altına inin.
+
+![Submit Üstten](/fotograflar/blog/atcoder-kullanimi/submit-top.png)
+
+
+"Language"ın karşısındaki menüden kodunuzun dilini seçin. Büyük kutucuğa
+kodunuzu yazın veya kopyalayıp yapıştırın.
+
+Artık en alttaki mavi "Submit" düğmesine basarak kodunuzu
+gönderebilirsiniz.
+
+- Eğer kodunuz çalıştıysa yeşil bir <span className="text-green-500">AC</span>
+  görürsünüz.
+
+- Eğer kodunuzda bir hata varsa veya çözümünüz yanlış ise turuncu bir
+  işaret görürsünüz. Bunların bazıları <span className="text-red-500">WA</span> (kod
+  hatalı çıktı verdi), <span className="text-orange-500">TLE</span> (kod zaman limitini
+  aştı), <span className="text-orange-500">RE</span> (kod çalışma zamanı hatası yaşadı),
+  <span className="text-orange-500">CE</span> (kod derleme zamanı hatası yaşadı).
+
+- Eğer kodunuz hala çalışmaktaysa (beklemedeyse) koyu gri bir işaret
+  görürsünüz, mesela <span className="text-gray-500">WJ</span> veya
+  <span className="text-gray-500">7/23</span>. Bu durumda endişelenecek bir şey
+  yoktur, sayfayı yenilemeyi deneyebilirsiniz.
+
+# Soruyu Çözemedim
+
+Eğer soruyu çözemediyseniz ve yardım almak ya da çözüme bakmak
+istiyorsanız bunun için iki yer vereceğim.
+
+## Editorial
+
+![image](/fotograflar/blog/atcoder-kullanimi/editorial-bar.png)
+
+"Editorial" bir problemin çözüm sayfasıdır, çoğu soruda bulunur.
+Editoriala ulaşmak için yukardaki panelden "Editorial" kısmına basın.
+
+![image](/fotograflar/blog/atcoder-kullanimi/editorial.png)
+
+Aradığınız problemin editorialı varsa tıklayın. [Örnek bir
+editorial](https://atcoder.jp/contests/abc336/editorial/9288).
+
+NOT: Bazı problemlerin birden fazla editorialı olabilir. Bu durumda
+resmi olanın yanında "Official" yazar, ancak resmi olmayana da bakmak
+isteyebilirsiniz.
+
+## Birine sormak (ft. bilgoli)
+
+Türkiye'deki bilgisayar olimpiyatçılarının bulunduğu [Bilgisayar
+Olimpiyatı](https://discord.gg/EedMW25Rmg) Discord sunucusuna girerseniz
+cp-tartisma kanalında size yardımcı olacak insanları bulabilirsiniz.
+
+NOT: Sunucuya kayıt olmak için CodeForces hesabınızı vermeniz
+gerekmektedir.
+
+# Contest
+
+Haftada bir yarışma düzenlendiğinden bahsetmiştik. Bu yarışmalara girmek
+için ana sayfada ortaya çıkacak yarışma duyurularında "Contest URL"
+tıklayın.
+
+![image](/fotograflar/blog/atcoder-kullanimi/arc-post.png)
+
+Contest ekranında "Register" veya "Rated Register"a tıklayın. Sayfa
+yüklendiğinde gelen formu doldurmanıza gerek yok aşağı inip mavi
+register tuşuna basabilirsiniz.
+
+NOT: Eğer seçeneği varsa "Unrated Register" da olabilirsiniz. Bunu
+yapmanız durumunda yarışma sizin ratinginizi değiştirmeyecektir.
+
+NOT: Yarışmadaki performansınız sonucunda AtCoder'daki ratinginiz (puan
+gibi) artabilir veya azalabilir. Rating gelip geçicidir siz gelişmeye
+bakın o7.
+
+# Kapanış
+
+Problem çözmek eğlencelidir ancak son birkaç hafta birinci aşama da bakın ki
+kampta buluşalım!

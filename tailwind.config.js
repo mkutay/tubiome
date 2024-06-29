@@ -14,6 +14,14 @@ module.exports = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-geist-mono)"],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            'blockquote p:first-of-type::before': false,
+            'blockquote p:first-of-type::after': false,
+          },
+        },
+      },
     },
   },
   darkMode: "class",

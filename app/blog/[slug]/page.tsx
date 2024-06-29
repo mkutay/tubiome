@@ -8,11 +8,14 @@ import { notFound } from 'next/navigation';
 import { siteConfig } from '@/config/site';
 import { title } from '@/components/primitives';
 import Link from 'next/link';
+import remarkLint from 'remark-lint';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 const options = {
   mdxOptions: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [],
+    remarkPlugins: [remarkGfm, remarkLint, remarkMath],
+    rehypePlugins: [rehypeKatex],
   }
 };
 
@@ -42,27 +45,26 @@ export default function Page({ params }: { params: { slug: string } }) {
   const formattedDate = format(props.meta.date, 'PP');
 
   return (
-    <div className="prose dark:prose-invert">
+    <div className="prose dark:prose-invert md:mb-16 mb-12">
       <h1 className={title()}>
         {props.meta.title}
       </h1>
-      <div className="font-semibold my-4">
+      <div className=" my-4 text-md">
         <span>
           {formattedDate}
         </span>
-        <span className="px-2 text-lg">
+        <span className="px-2">
           ·
         </span>
         {props.meta.authors.map((author: { name: string, url: string }) => (
           <span key={author.name}>
-            <span>
-              <Link
-                href={author.url}
-              >
-                {author.name}
-              </Link>
-            </span>
-            <span className="px-2 text-lg">
+            <Link
+              href={author.url}
+              className="font-normal text-md"
+            >
+              {author.name}
+            </Link>
+            <span className="px-2">
               ·
             </span>
           </span>

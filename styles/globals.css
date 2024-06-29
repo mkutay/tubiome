@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.prose {
+  @apply prose-headings:mb-4 prose-headings:mt-8;
+  @apply prose-p:my-4 prose-p:py-0;
+  @apply prose-hr:my-8;
+  @apply prose-code:text-neutral-900 dark:prose-code:text-neutral-100 prose-code:bg-neutral-100 dark:prose-code:bg-neutral-900;
+  @apply prose-blockquote:text-neutral-900 dark:prose-blockquote:text-neutral-100 prose-blockquote:bg-neutral-100 dark:prose-blockquote:bg-neutral-900 prose-blockquote:my-4;
+  @apply prose-pre:text-neutral-900 dark:prose-pre:text-neutral-100 prose-pre:bg-neutral-100 dark:prose-pre:bg-neutral-900;
+  @apply prose-headings:tracking-tighter;
+  @apply prose-blockquote:bg-neutral-100 prose-blockquote:dark:bg-neutral-900 prose-blockquote:text-neutral-900 prose-blockquote:dark:text-neutral-100 prose-blockquote:border-neutral-300 prose-blockquote:dark:border-neutral-700;
+  @apply prose-li:my-0 prose-li:py-0;
+}

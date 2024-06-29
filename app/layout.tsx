@@ -10,6 +10,7 @@ import { HeartFilledIcon } from "@/components/icons";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/footer";
+import '@/styles/katex.min.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
