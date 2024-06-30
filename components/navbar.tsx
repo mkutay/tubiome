@@ -105,7 +105,7 @@ export const Navbar = () => {
             ) : (
               <ButtonGroup variant="bordered" key={item.label}>
                 <Button>
-                  <NextLink
+                  <Link
                     className={clsx(
                       linkStyles({ color: "foreground" }),
                     )}
@@ -113,7 +113,7 @@ export const Navbar = () => {
                     href={item.href}
                   >
                     {item.label}
-                  </NextLink>
+                  </Link>
                 </Button>
                 <Dropdown placement="bottom-end">
                 <DropdownTrigger>
