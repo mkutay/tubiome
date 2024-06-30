@@ -1,74 +1,75 @@
 ---
-title: Bilgisayar Olimpiyatları İçin Atcoder Kullanımı
-description: Atcoder platformun nasıl bilgisayar olimpiyatında kendini geliştirmek için kullanılabilinmektedir?
+title: Bilgisayar Olimpiyatları İçin AtCoder Kullanımı
+description: AtCoder platformu bilgisayar olimpiyatında kendini geliştirmek için nasıl kullanılabilir?
 tags: [bilgisayar, atcoder, olimpiyat]
 date: 2024-06-26
 authors: [{ name: 'Kerem Emre Güner', url: 'https://terracottalite.neocities.org/' }, { name: 'Mehmet Kutay Bozkurt', url: 'https://www.mkutay.dev' }]
-excerpt: "[AtCoder](https://atcoder.jp), Japonlarn bilgisayar olimpiyatı platformu. Matematik ağırlıklı sorularıyla da bilinir. Neredeyse her hafta yarışma düzenlenir."
+excerpt: "[AtCoder](https://atcoder.jp), matematik ağırlıklı problemleriyle bilinen Japonya temelli bir bilgisayar olimpiyatı platformudur. Sitede neredeyse her hafta yarışma düzenlenmektedir."
 ---
+[AtCoder](https://atcoder.jp), matematik ağırlıklı problemleriyle bilinen Japonya temelli bir bilgisayar olimpiyatı platformudur.
+Sitede neredeyse her hafta yarışma düzenlenmektedir.
 
-[AtCoder](https://atcoder.jp), Japonlarn bilgisayar olimpiyatı platformu. Matematik ağırlıklı sorularıyla da bilinir. Neredeyse her hafta yarışma düzenlenir.
-
-> Atcoder çözün. (Cengiz Eray Aslan)
+> AtCoder çözün. (Cengiz Eray Aslan, IOI Bronz)
 
 # Hesap Açmak
 
-[Sağ üstteki "Sign Up" butonu](https://atcoder.jp/register)na tıklayın ve kendinize bir kullanıcı adı belirleyin.
-Kullanıcı adı en az 3 en fazla 16 adet harf, sayı veya alt çizgiden oluşmalı.
-Kullanıcı adınızı belirledikten sonra e-posta, şifre gibi gerekli kısımları doldurun ve mavi "sign up" butonuna tıklayın.
+İlk önce [bu](https://atcoder.jp/register) linkteki sağ üstte bulunan "Sign Up" butonuna tıklayarak ve kendinize bir 
+kullanıcı adı belirlemelisiniz.
+Aklınızda bulundurun ki kullanıcı adı en az 3 ve en fazla 16 adet karakterden oluşmasının yanında, sayı veya alt çizgi de içermelidir.
+Kullanıcı adınızı belirledikten sonra e-posta, şifre gibi gerekli kısımları doldurarak ve mavi "Sign Up" butonuna tıklayarak 
+kendinize bir AtCoder hesabı açabilirsiniz.
 
 # Geçmiş Problemler
 
-AtCoder'daki yarışmalarda daha önce çıkan soruları AtCoder'ın sitesinde liste halinde görmek için malesef bir yol yok, fakat [Kenkoooo'nun AtCoder Problem Listesi](https://kenkoooo.com/atcoder/#/table/)nde geçmiş problemleri görebiliyorsunuz.
-
-Siteye girdiğinizde soruları görebilmek için AtCoder'ın hangi yarışmasının problemlerini görmek istediğinizi seçmeniz gerek.
+AtCoder'daki geçmiş yarışmalarda daha önce çıkan problemleri AtCoder'ın kendi sitesinde liste halinde görmek mümkün değildir 
+fakat [Kenkoooo](https://kenkoooo.com/atcoder/#/table/)'nun AtCoder problem listesinde geçmiş problemleri görebilmek mümkündür.
+Siteye girdiğinizde AtCoder'ın hangi yarışmasının problemlerini görmek istediğinizi seçmeniz gerekmektedir.
 
 ![Kenkoooo Contests](/fotograflar/blog/atcoder-kullanimi/kenkoooo-contests.png)
 
-En önemli 3 yarışma *ABC*, *ARC* ve *AGC*. ABC en kolayı, ARC zor ve AGC
-çok zor. Yeni başlayan birinin ABC problemlerinden seçmesi iyi olur
-zaten açılımı "AtCoder Beginner Contest".
+AtCoder'ın en sık düzenlediği ve en popüler olan yarışmaları *ABC*, *ARC* ve *AGC*'dir. Bunların arasında ABC en kolayı, ARC orta ve AGC
+en zorudur. Bilgisayar olimpiyatlarına yeni başlayan birinin ABC problemlerinden ilk birkaçını seçmesi önerilir ama bu karar 
+tabii ki de kullanıcıya kalmıştır, nası olsa ABC'nin açılımı "AtCoder Beginner Contest"tir.
 
-Problemlerin yanındaki topun rengi onların zorluğunu gösterir. [Renklerin
-sayı karşılığına buradan bakabilirsiniz](https://atcoder.jp/posts/16).
+Problemlerin yanındaki topun rengi onların zorluğunu gösterir. Renklerin
+sayı karşılığına [buradan](https://atcoder.jp/posts/16) bakabilirsiniz.
+Zaten birçok farklı seviyedeki problemleri çözdükçe bu sayıların ve renklerin az çok ne kadar zorluğa denk
+geldiğini anlayacaksınızdır.
 
 # Problem Metni
 
 Örnek olarak [CTZ](https://atcoder.jp/contests/abc336/tasks/abc336_b)
-problemini inceleyelim.
+problemini inceleyelim. İsminin hemen altında "Time Limit" (zaman limiti) ve "Memory Limit"
+(hafıza limiti) verilmiştir. Zaman limiti 2 saniye ve hafıza limiti 1024 MB
+(yani 1 GB) olarak belirlenmiştir. Yani eğer probleme yazdığınız kodun çalışması 2 saniyeden
+fazla sürerse veya 1 GB'dan fazla hafıza harcarsa yanlış sayılmaktadır.
 
-İsminin hemen altında "Time Limit" (zaman limiti) ve "Memory Limit"
-(hafıza limiti) vermiş. Zaman limiti 2 saniye ve Hafıza limiti 1024 MB
-yani 1 GB. Yani eğer probleme yazdığınız kodun çalışması 2 saniyeden
-fazla sürerse veya 1 GB'dan fazla hafıza harcarsa yanlış sayılır.
+Zaman limitinin altında da "Score" vardır, bu değer bu problemi yarışma anında
+eğer çözmüş olsaydınız size kaç puan verilmiş olacağını söylemektedir.
 
-Zaman limitinin altında "Score" var, bu problemi yarışma anında
-çözseydiniz size kaç puan getireceğini gösteriyor.
-
-Problemin puanının altında problemin kendisi verilmiş.
+Problemin puanının altında ise problemin kendisi verilmiştir.
 
 "Constraints" bölümü programa verilecek girdi için kısıtlar verir, eğer
-bu olmasaydı $N = 10^{100}$ vermesinde bir sorun olmazdı. Burada $N$'in
-en fazla $10^9$ olacağını söylemiş.
+bu bölüm olmasaydı $N = 10^{100}$ verilmesinde bir sorun olmazdı. Burada $N$'in
+en fazla $10^9$ olacağını söylenmiştir. Bu bölüm sizin kodunuzu nasıl şekillendireceğinizi
+size bilgi vermektedir. Problemin kendisini okuduktan sonra bu bölüme iyi bakmanız önerilir.
 
 "Input" ve "Output" bölümleri programa verilecek girdinin formatını ve
-vermesi gereken çıktının formatını gösteriyor.
+vermesi gereken çıktının formatını göstermektedir.
 
-"Sample Input" yani örnek girdi kodunuzu göndermeden önce çözümünüzü
-kontrol etmek için kullanabilirsiniz. Bazı örnek girdilerin altında
+"Sample Input" (örnek girdi) kodunuzu göndermeden önce çözümünüzü
+kontrol etmek için kullanabileceğiniz bir şeydir. Bazı örnek girdilerin altında
 açıklama yazısı verilmiş, eğer örnek girdinin neden böyle olduğunu
-anlayamazsanız açıklama size yardımcı olur.
+anlayamazsanız açıklama size yardımcı olmaktadır.
 
-NOT: Kodunuzun örnek girdilerden geçmiş olması tamamen doğru olduğu
+**NOT:** Kodunuzun örnek girdilerden geçmiş olması tamamen doğru olduğu
 anlamına gelmez.
 
 # Kodu Göndermek
 
-Soruyu çözdüğünüzde doğruluğunu kontrol etmek için kodunuzu AtCoder'a
-göndermeniz gerekiyor. Kodu kısa olduğundan örnek problem olarak yine
-[CTZ](https://atcoder.jp/contests/abc336/tasks/abc336_b) kullanalım.
-
-Şu kodu kullanacağız:
+Problemi çözdüğünüzde doğruluğunu kontrol etmek için kodunuzu AtCoder'a
+göndermeniz gerekmektedir. Kodu kısa olduğundan örnek problem olarak yine
+[CTZ](https://atcoder.jp/contests/abc336/tasks/abc336_b) kullanalım. Problemin çözümü için bu kodu kullanacağız:
 
 ```cpp
 #include <stdio.h>
@@ -80,13 +81,12 @@ int main()
 }
 ```
 
-NOT: *Yarışma bitmişken* problemin kodunu başkasından almak AtCoder
-kurallarına aykırı değil merak etmeyin.
+**NOT:** *Yarışma bitmişken* problemin kodunu başkasından almak AtCoder
+kurallarına aykırı değildir fakat yarışma devam ederken problem tartışmak veya problemin çözümünü konuşmak kesinlikle **yasaktır**.
 
-Problem sayfasının en altına inin.
+Problem sayfasının en altına bu görseli görene kadar inin.
 
 ![Submit Üstten](/fotograflar/blog/atcoder-kullanimi/submit-top.png)
-
 
 "Language"ın karşısındaki menüden kodunuzun dilini seçin. Büyük kutucuğa
 kodunuzu yazın veya kopyalayıp yapıştırın.
@@ -108,21 +108,21 @@ gönderebilirsiniz.
   <span className="text-gray-500">7/23</span>. Bu durumda endişelenecek bir şey
   yoktur, sayfayı yenilemeyi deneyebilirsiniz.
 
-# Soruyu Çözemedim
+# Problemi Çözemedim
 
-Eğer soruyu çözemediyseniz ve yardım almak ya da çözüme bakmak
-istiyorsanız bunun için iki yer vereceğim.
+Eğer problemi çözemediyseniz ve yardım almak ya da çözüme bakmak
+istiyorsanız bunun için iki yer çözüm vardır.
 
 ## Editorial
 
 ![image](/fotograflar/blog/atcoder-kullanimi/editorial-bar.png)
 
-"Editorial" bir problemin çözüm sayfasıdır, çoğu soruda bulunur.
-Editoriala ulaşmak için yukardaki panelden "Editorial" kısmına basın.
+"Editorial" bir problemin çözüm sayfasıdır, çoğu problemde İngilizce bulunmaktadır.
+Editoriala ulaşmak için yukardaki panelden "Editorial" kısmına basabilirsiniz.
 
-![image](/fotograflar/blog/atcoder-kullanimi/editorial.png)
+![editorial](/fotograflar/blog/atcoder-kullanimi/editorial.png)
 
-Aradığınız problemin editorialı varsa tıklayın. [Örnek bir
+Aradığınız problemin editorialı varsa tıklayınız. [Örnek bir
 editorial](https://atcoder.jp/contests/abc336/editorial/9288).
 
 NOT: Bazı problemlerin birden fazla editorialı olabilir. Bu durumda
@@ -135,25 +135,25 @@ Türkiye'deki bilgisayar olimpiyatçılarının bulunduğu [Bilgisayar
 Olimpiyatı](https://discord.gg/EedMW25Rmg) Discord sunucusuna girerseniz
 cp-tartisma kanalında size yardımcı olacak insanları bulabilirsiniz.
 
-NOT: Sunucuya kayıt olmak için CodeForces hesabınızı vermeniz
+NOT: Sunucuya kayıt olmak için CodeForces hesabınızın olması
 gerekmektedir.
 
 # Contest
 
-Haftada bir yarışma düzenlendiğinden bahsetmiştik. Bu yarışmalara girmek
-için ana sayfada ortaya çıkacak yarışma duyurularında "Contest URL"
-tıklayın.
+Haftada bir yarışma düzenlendiğinden bahsedilmişti. Bu yarışmalara girmek
+için ana sayfada ortaya çıkacak yarışma duyurularında "Contest URL"e
+tıklayabilirsiniz.
 
-![image](/fotograflar/blog/atcoder-kullanimi/arc-post.png)
+![arc post](/fotograflar/blog/atcoder-kullanimi/arc-post.png)
 
-Contest ekranında "Register" veya "Rated Register"a tıklayın. Sayfa
-yüklendiğinde gelen formu doldurmanıza gerek yok aşağı inip mavi
+Contest ekranında "Register" veya "Rated Register"a tıklayınız. Sayfa
+yüklendiğinde gelen formu doldurmanıza gerek yoktur aşağı inip mavi
 register tuşuna basabilirsiniz.
 
-NOT: Eğer seçeneği varsa "Unrated Register" da olabilirsiniz. Bunu
+**NOT:** Eğer seçeneği varsa "Unrated Register" da olabilirsiniz. Bunu
 yapmanız durumunda yarışma sizin ratinginizi değiştirmeyecektir.
 
-NOT: Yarışmadaki performansınız sonucunda AtCoder'daki ratinginiz (puan
+**NOT:** Yarışmadaki performansınız sonucunda AtCoder'daki ratinginiz (puan
 gibi) artabilir veya azalabilir. Rating gelip geçicidir siz gelişmeye
 bakın o7.
 
