@@ -80,11 +80,9 @@ export default function Home() {
       <Divider className="sm:my-16 my-10"/>
 
       <div className="max-w-6xl sm:mb-16 mb-10">
-        <Link href="/blog/sayfa/1" className={title({ color: "blue" })}>
-          <h1 className={title({ color: "cyan" })}>
-            Olimpiyat&nbsp;
-          </h1>
-        </Link>
+        <h1 className={title({ color: "cyan" })}>
+          Olimpiyat&nbsp;
+        </h1>
         <h1 className={title()}>Branşları</h1>
         <div className="gap-3 grid grid-cols-2 mt-8 md:mt-10">
           {items.map((item, index) => (

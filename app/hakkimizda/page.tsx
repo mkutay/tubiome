@@ -23,7 +23,7 @@ export default function Page() {
         Bu doğrultuda paneller ve online eğitim kampları aracılığıyla sizlere olimpiyatların ve yurtdışı sınavlarının içeriği hakkında detaylı bilgi sunmaya çalışıyoruz.
       </p>
       <p>
-        Diğer bir yandan; geniş soru arşivimiz sayesinde Matematik (ortaokul ve lise), Bilgisayar (ortaokul ve lise), Fizik, Kimya, Biyoloji, Astrofizik, Coğrafya ve Felsefe dallarında çıkmış ve çıkabilecek sorulara kolay erişim sağlıyoruz.
+        Diğer bir yandan; geniş soru arşivimiz sayesinde matematik (ortaokul ve lise), bilgisayar (ortaokul ve lise), fizik, kimya, biyoloji, astrofizik, coğrafya, ekonomi, linguistik ve felsefe dallarında çıkmış ve çıkabilecek sorulara kolay erişim sağlıyoruz.
       </p>
       <p>
         Bunun yanında site, <Link href="https://www.mkutay.dev">Mehmet Kutay Bozkurt</Link> tarafından yapılmıştır.
