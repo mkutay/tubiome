@@ -26,7 +26,7 @@ export default function Page() {
         Diğer bir yandan; geniş soru arşivimiz sayesinde Matematik (ortaokul ve lise), Bilgisayar (ortaokul ve lise), Fizik, Kimya, Biyoloji, Astrofizik, Coğrafya ve Felsefe dallarında çıkmış ve çıkabilecek sorulara kolay erişim sağlıyoruz.
       </p>
       <p>
-        Bunun yanında site, [Mehmet Kutay Bozkurt](https://www.mkutay.dev) tarafından yapılmıştır.
+        Bunun yanında site, <Link href="https://www.mkutay.dev">Mehmet Kutay Bozkurt</Link> tarafından yapılmıştır.
       </p>
       <div className="hidden lg:flex gap-2 items-center justify-center">
         <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
